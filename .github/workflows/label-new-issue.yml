@@ -14,9 +14,9 @@ jobs:
 steps:
   - name: Checkout repository
     uses: actions/checkout@v1
-  - name: Add traige label
+  - name: Add Ready label
     env: 
       GH_Token: ${{ secrets.GITHUB_TOKEN }}
       ISSUE_NUMBER: ${{ github.event.issue.number }}
-      LABEL: "triage"
+      LABEL: "Ready"
     run: gh issue edit "$ISSUE_NUMBER" --add-label "$LABEL"concurrency: 
