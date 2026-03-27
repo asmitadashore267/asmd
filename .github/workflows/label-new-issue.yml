@@ -19,4 +19,4 @@ steps:
       GH_Token: ${{ secrets.GITHUB_TOKEN }}
       ISSUE_NUMBER: ${{ github.event.issue.number }}
       LABEL: "Ready"
-    run: gh issue edit "$ISSUE_NUMBER" --add-label "$LABEL"concurrency: 
+    run: gh issue edit "$ISSUE_NUMBER" --add-label "$LABEL"
